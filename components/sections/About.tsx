@@ -62,7 +62,7 @@ export default function About() {
           {/* Left Column: About copy and Motto */}
           <motion.div variants={itemVariants} className="lg:col-span-6 flex flex-col gap-6 text-left">
             <h3 className="text-xl md:text-2xl font-black text-slate-900 leading-snug">
-              ZippyTrail Transport & Logistics Company Limited
+              ZippyTrail Transport & Logistics
             </h3>
             
             <p className="text-slate-600 text-sm md:text-base leading-relaxed">

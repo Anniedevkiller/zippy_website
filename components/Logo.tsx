@@ -24,7 +24,7 @@ export default function Logo({ className, size = 32, showBackground = true }: Lo
     >
       {/* Primary Orange Background Square */}
       {showBackground && (
-        <rect width="500" height="500" rx="90" fill="#CC5500" />
+        <rect width="500" height="500" fill="#CC5500" />
       )}
 
       {/* Symmetrical white stair ribbons */}
@@ -32,36 +32,36 @@ export default function Logo({ className, size = 32, showBackground = true }: Lo
         {/* ROW 1 */}
         {/* Left ribbon */}
         <path
-          d={`M 60,${180 + dy} L 110,${180 + dy} L 190,${120 + dy} L 244,${120 + dy} L 244,${165 + dy} L 190,${165 + dy} L 110,${225 + dy} L 60,${225 + dy} Z`}
+          d="M 60,187.5 L 110,187.5 L 190,127.5 L 244,127.5 L 244,172.5 L 190,172.5 L 110,232.5 L 60,232.5 Z"
           fill={showBackground ? "#FFFFFF" : "#CC5500"}
         />
         {/* Right ribbon */}
         <path
-          d={`M 256,${120 + dy} L 310,${120 + dy} L 390,${60 + dy} L 440,${60 + dy} L 440,${105 + dy} L 390,${105 + dy} L 310,${165 + dy} L 256,${165 + dy} Z`}
+          d="M 256,127.5 L 310,127.5 L 390,67.5 L 440,67.5 L 440,112.5 L 390,112.5 L 310,172.5 L 256,172.5 Z"
           fill={showBackground ? "#FFFFFF" : "#CC5500"}
         />
 
         {/* ROW 2 */}
         {/* Left ribbon */}
         <path
-          d={`M 60,${280 + dy} L 110,${280 + dy} L 190,${220 + dy} L 244,${220 + dy} L 244,${265 + dy} L 190,${265 + dy} L 110,${325 + dy} L 60,${325 + dy} Z`}
+          d="M 60,287.5 L 110,287.5 L 190,227.5 L 244,227.5 L 244,272.5 L 190,272.5 L 110,332.5 L 60,332.5 Z"
           fill={showBackground ? "#FFFFFF" : "#CC5500"}
         />
         {/* Right ribbon */}
         <path
-          d={`M 256,${220 + dy} L 310,${220 + dy} L 390,${160 + dy} L 440,${160 + dy} L 440,${205 + dy} L 390,${205 + dy} L 310,${265 + dy} L 256,${265 + dy} Z`}
+          d="M 256,227.5 L 310,227.5 L 390,167.5 L 440,167.5 L 440,212.5 L 390,212.5 L 310,272.5 L 256,272.5 Z"
           fill={showBackground ? "#FFFFFF" : "#CC5500"}
         />
 
         {/* ROW 3 */}
         {/* Left ribbon */}
         <path
-          d={`M 60,${380 + dy} L 110,${380 + dy} L 190,${320 + dy} L 244,${320 + dy} L 244,${365 + dy} L 190,${365 + dy} L 110,${425 + dy} L 60,${425 + dy} Z`}
+          d="M 60,387.5 L 110,387.5 L 190,327.5 L 244,327.5 L 244,372.5 L 190,372.5 L 110,432.5 L 60,432.5 Z"
           fill={showBackground ? "#FFFFFF" : "#CC5500"}
         />
         {/* Right ribbon */}
         <path
-          d={`M 256,${320 + dy} L 310,${320 + dy} L 390,${260 + dy} L 440,${260 + dy} L 440,${305 + dy} L 390,${305 + dy} L 310,${365 + dy} L 256,${365 + dy} Z`}
+          d="M 256,327.5 L 310,327.5 L 390,267.5 L 440,267.5 L 440,312.5 L 390,312.5 L 310,372.5 L 256,372.5 Z"
           fill={showBackground ? "#FFFFFF" : "#CC5500"}
         />
       </g>

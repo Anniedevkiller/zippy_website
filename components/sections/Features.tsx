@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  MapPin, ShieldCheck, Zap, Calendar, DollarSign,
+  MapPin, ShieldCheck, Zap, Calendar, Banknote,
   Navigation, ClipboardList, PackageOpen, TrendingUp,
   Users, Briefcase, Clock, Truck, Award
 } from "lucide-react";
@@ -91,7 +91,7 @@ const featuresData: FeatureSection[] = [
         description: "Your business deliveries move straight to the front of the line for immediate pickup.",
       },
       {
-        icon: DollarSign,
+        icon: Banknote,
         title: "Discounted Rates",
         description: "Enjoy lower logistics costs and predictable pricing with our exclusive business packages.",
       },
@@ -135,12 +135,12 @@ export default function Features() {
 
         {/* Tab Buttons Selector */}
         <div className="flex justify-center mb-16">
-          <div className="flex bg-slate-100 border border-slate-200 p-1.5 rounded-full shadow-inner">
+          <div className="flex flex-wrap sm:flex-nowrap justify-center bg-slate-100 border border-slate-200 p-1.5 rounded-2xl sm:rounded-full shadow-inner gap-1 sm:gap-0">
             {featuresData.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`relative px-6 py-3 rounded-full text-sm font-bold transition-all focus:outline-none ${
+                className={`relative px-4 sm:px-6 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-bold transition-all focus:outline-none ${
                   activeTab === tab.id ? "text-white" : "text-slate-500 hover:text-slate-800"
                 }`}
               >

@@ -36,6 +36,18 @@ const flyersList: FlyerItem[] = [
     title: "Business Retainership Solutions",
     description: "Detailed breakdown of monthly priority dispatches and discounted corporate pricing tiers.",
   },
+  {
+    id: 5,
+    image: "/flyer-5.jpeg",
+    title: "New Opportunities & Outlook",
+    description: "New Week. New Month. New Opportunities. Let's move forward with purpose, productivity, and progress. We've got your deliveries covered.",
+  },
+  {
+    id: 6,
+    image: "/flyer-6.jpeg",
+    title: "Business Owners Guide",
+    description: "Stop leaving your shop to make deliveries. Learn how ZippyTrail handles store dispatches and monthly packages.",
+  },
 ];
 
 const containerVariants = {
@@ -94,7 +106,7 @@ export default function Flyers() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {flyersList.map((flyer) => (
             <motion.div

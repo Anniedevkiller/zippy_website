@@ -95,7 +95,7 @@ export function Carousel({ slides, autoplay = true, autoplayInterval = 5000, cla
         <button
           onClick={() => paginate(-1)}
           aria-label="Previous slide"
-          className="p-3 rounded-full border border-white/5 hover:border-primary/40 hover:bg-white/5 text-white/60 hover:text-primary transition-all focus:outline-none"
+          className="p-3 rounded-full border border-slate-200 hover:border-primary/40 hover:bg-slate-50 text-slate-400 hover:text-primary transition-all focus:outline-none"
         >
           <ArrowLeft className="w-5 h-5" />
         </button>
@@ -114,7 +114,7 @@ export function Carousel({ slides, autoplay = true, autoplayInterval = 5000, cla
               aria-label={`Go to slide ${index + 1}`}
               className={cn(
                 "h-2 rounded-full transition-all duration-300",
-                index === activeIndex ? "w-6 bg-primary" : "w-2 bg-white/20 hover:bg-white/40"
+                index === activeIndex ? "w-6 bg-primary" : "w-2 bg-slate-200 hover:bg-slate-300"
               )}
             />
           ))}
@@ -123,7 +123,7 @@ export function Carousel({ slides, autoplay = true, autoplayInterval = 5000, cla
         <button
           onClick={() => paginate(1)}
           aria-label="Next slide"
-          className="p-3 rounded-full border border-white/5 hover:border-primary/40 hover:bg-white/5 text-white/60 hover:text-primary transition-all focus:outline-none"
+          className="p-3 rounded-full border border-slate-200 hover:border-primary/40 hover:bg-slate-50 text-slate-400 hover:text-primary transition-all focus:outline-none"
         >
           <ArrowRight className="w-5 h-5" />
         </button>

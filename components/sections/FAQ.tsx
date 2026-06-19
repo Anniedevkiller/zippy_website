@@ -18,7 +18,7 @@ const faqList: FAQItem[] = [
   {
     id: "quote",
     title: "How do I get a delivery quote?",
-    content: "Simply send us your pickup location, destination, and package details via Call, WhatsApp, or DM for a quick and accurate quote.",
+    content: "Simply enter your pickup location, destination, and package details directly inside the Zippy Trail app for an instant, transparent quote.",
   },
   {
     id: "retainer",
@@ -33,7 +33,7 @@ const faqList: FAQItem[] = [
   {
     id: "booking",
     title: "How do I book a delivery?",
-    content: "You can book a delivery easily by calling us, sending a WhatsApp message, or sending a DM with your delivery details, and our team will handle the rest.",
+    content: "You can book a delivery easily from the Zippy Trail app.",
   },
   {
     id: "location",

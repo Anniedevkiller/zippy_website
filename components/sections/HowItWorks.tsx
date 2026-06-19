@@ -17,7 +17,7 @@ const steps: Step[] = [
     id: 1,
     icon: MessageSquare,
     title: "Request Dispatch",
-    description: "Send us your pickup location, destination, and package details via Call, WhatsApp, or direct message.",
+    description: "Enter your pickup location, destination, and package details directly inside the Zippy Trail app.",
     duration: "Instant",
   },
   {

@@ -48,7 +48,7 @@ function CountUpItem({ icon: Icon, targetValue, suffix, label }: StatItem) {
   return (
     <div
       ref={ref}
-      className="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-md shadow-slate-100/50 flex flex-col items-center text-center relative overflow-hidden group hover:border-primary/20 hover:shadow-lg transition-all duration-300"
+      className="bg-white p-4 sm:p-8 rounded-2xl border border-slate-200/80 shadow-md shadow-slate-100/50 flex flex-col items-center text-center relative overflow-hidden group hover:border-primary/20 hover:shadow-lg transition-all duration-300"
     >
       <div className="absolute top-0 right-0 w-24 h-24 bg-primary/3 rounded-full blur-2xl pointer-events-none" />
       

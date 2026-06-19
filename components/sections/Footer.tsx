@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Send, Twitter, Instagram, Linkedin, Facebook, MapPin, Phone, Mail } from "lucide-react";
+import { Send, Instagram, Facebook, MapPin, Phone, Mail } from "lucide-react";
 import Logo from "@/components/Logo";
 
 export default function Footer() {
@@ -66,7 +66,7 @@ export default function Footer() {
             </div>
             <div className="flex items-center gap-3">
               <Phone className="w-4 h-4 text-primary" />
-              <span>08061295020, 0803557495</span>
+              <span>08035557495</span>
             </div>
             <div className="flex items-center gap-3">
               <Mail className="w-4 h-4 text-primary" />
@@ -141,16 +141,10 @@ export default function Footer() {
 
           {/* Social icons */}
           <div className="flex gap-4 mt-2">
-            <a href="#" className="p-2.5 rounded-full bg-white border border-slate-200 hover:border-primary/10 hover:text-primary text-slate-500 shadow-sm transition-all">
-              <Twitter className="w-4 h-4" />
-            </a>
-            <a href="https://instagram.com/zippytrailcl" target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-full bg-white border border-slate-200 hover:border-primary/10 hover:text-primary text-slate-500 shadow-sm transition-all">
+            <a href="https://www.instagram.com/zippytrailtcl?igsh=MXBqaGNpNGE2Ym15cQ==" target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-full bg-white border border-slate-200 hover:border-primary/10 hover:text-primary text-slate-500 shadow-sm transition-all" title="Instagram">
               <Instagram className="w-4 h-4" />
             </a>
-            <a href="#" className="p-2.5 rounded-full bg-white border border-slate-200 hover:border-primary/10 hover:text-primary text-slate-500 shadow-sm transition-all">
-              <Linkedin className="w-4 h-4" />
-            </a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-full bg-white border border-slate-200 hover:border-primary/10 hover:text-primary text-slate-500 shadow-sm transition-all">
+            <a href="https://www.facebook.com/share/1BP17xWyDS/" target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-full bg-white border border-slate-200 hover:border-primary/10 hover:text-primary text-slate-500 shadow-sm transition-all" title="Facebook">
               <Facebook className="w-4 h-4" />
             </a>
           </div>
@@ -159,7 +153,7 @@ export default function Footer() {
 
       {/* Credits */}
       <div className="max-w-7xl mx-auto px-6 md:px-12 border-t border-slate-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400 font-medium relative z-10">
-        <span>&copy; {currentYear} ZippyTrail Transport & Logistics Co. Ltd. All rights reserved.</span>
+        <span>&copy; {currentYear} ZippyTrail Transport & Logistics. All rights reserved.</span>
         <div className="flex gap-6">
           <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
           <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>

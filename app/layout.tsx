@@ -11,7 +11,7 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: "ZippyTrail | Courier, Transport & Logistics Services",
-  description: "ZippyTrail Transport & Logistics Company Limited provides swift, safe, and reliable movement of people, parcels, documents, and business deliveries across Abia State and beyond.",
+  description: "ZippyTrail Transport & Logistics provides swift, safe, and reliable movement of people, parcels, documents, and business deliveries across Abia State and beyond.",
   keywords: [
     "delivery",
     "logistics",
@@ -24,9 +24,9 @@ export const metadata: Metadata = {
     "ZippyTrail",
     "last mile delivery",
   ],
-  authors: [{ name: "ZippyTrail Transport & Logistics Co. Ltd." }],
+  authors: [{ name: "ZippyTrail Transport & Logistics" }],
   openGraph: {
-    title: "ZippyTrail | Transport & Logistics Co. Ltd.",
+    title: "ZippyTrail | Transport & Logistics",
     description: "Swift, safe, and reliable movement of people, parcels, documents, and business deliveries across Abia State and beyond. Zippy. Swift. Reliable. Safe.",
     type: "website",
     locale: "en_US",

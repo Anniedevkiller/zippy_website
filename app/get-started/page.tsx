@@ -165,7 +165,7 @@ export default function GetStarted() {
                     <input
                       type="tel"
                       required
-                      placeholder="e.g. 08061295020"
+                      placeholder="e.g. 08035557495"
                       disabled={loading}
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}

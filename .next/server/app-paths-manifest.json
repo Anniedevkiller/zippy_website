@@ -1,5 +1,7 @@
 {
   "/api/submit/route": "app/api/submit/route.js",
-  "/page": "app/page.js",
-  "/get-started/page": "app/get-started/page.js"
+  "/_not-found/page": "app/_not-found/page.js",
+  "/rider/page": "app/rider/page.js",
+  "/get-started/page": "app/get-started/page.js",
+  "/page": "app/page.js"
 }

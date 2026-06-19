@@ -114,7 +114,7 @@ export default function RouteScene() {
       </div>
 
       {/* Steps checklist display */}
-      <div className="w-full grid grid-cols-4 gap-2 mt-4 text-center">
+      <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-2 mt-4 text-center">
         {stepsInfo.map((step, idx) => {
           const isActive = idx === activeStep;
           return (

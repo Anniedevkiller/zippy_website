@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Shield, Clock, DollarSign, ArrowRight, CheckCircle, Navigation, Award, Smartphone } from "lucide-react";
+import { Shield, Clock, Wallet, ArrowRight, CheckCircle, Navigation, Award, Smartphone } from "lucide-react";
 import Footer from "@/components/sections/Footer";
 
 export default function BecomeRider() {
@@ -94,7 +94,7 @@ export default function BecomeRider() {
             
             <div className="flex items-start gap-3 text-left">
               <div className="w-8 h-8 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-primary flex-shrink-0">
-                <DollarSign className="w-4 h-4" />
+                <Wallet className="w-4 h-4" />
               </div>
               <div>
                 <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider">Reliable Payouts</h4>
@@ -232,7 +232,7 @@ export default function BecomeRider() {
                     <input
                       type="tel"
                       required
-                      placeholder="08061295020"
+                      placeholder="08035557495"
                       disabled={loading}
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -259,7 +259,7 @@ export default function BecomeRider() {
                     value={formData.vehicleType}
                     disabled={loading}
                     onChange={(e) => setFormData({ ...formData, vehicleType: e.target.value })}
-                    className="bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-955 focus:outline-none focus:border-primary transition-colors cursor-pointer disabled:opacity-75"
+                    className="bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:border-primary transition-colors cursor-pointer disabled:opacity-75"
                   >
                     <option value="bicycle">Bicycle</option>
                     <option value="motorbike">Motorcycle / Dispatch Bike</option>

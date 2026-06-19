@@ -26,7 +26,7 @@ export default function HeroScene() {
         initial={{ opacity: 0, scale: 0.95, y: 20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="w-full max-w-lg bg-white border border-slate-200 shadow-xl shadow-slate-100 rounded-3xl overflow-hidden flex flex-col h-[420px] relative z-10"
+        className="w-full max-w-lg bg-white border border-slate-200 shadow-xl shadow-slate-100 rounded-3xl overflow-hidden flex flex-col h-auto sm:h-[420px] relative z-10"
       >
         {/* Terminal Header */}
         <div className="bg-slate-50 border-b border-slate-200 px-6 py-4 flex justify-between items-center flex-shrink-0">
@@ -48,37 +48,37 @@ export default function HeroScene() {
         </div>
 
         {/* Dashboard Body */}
-        <div className="flex-grow flex p-6 gap-6 overflow-hidden">
+        <div className="flex-grow flex flex-col sm:flex-row p-4 sm:p-6 gap-4 sm:gap-6 overflow-hidden">
           
           {/* Left Panel: Active Dispatches */}
-          <div className="w-2/5 flex flex-col gap-4 overflow-y-auto pr-1">
-            <h4 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest border-b border-slate-100 pb-2">
+          <div className="w-full sm:w-2/5 flex flex-col gap-2 sm:gap-4 overflow-y-auto pr-1">
+            <h4 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest border-b border-slate-100 pb-1.5 sm:pb-2">
               Active Dispatches
             </h4>
             
-            <div className="flex flex-col gap-2.5">
+            <div className="grid grid-cols-3 sm:flex sm:flex-col gap-2 sm:gap-2.5">
               {/* Order Item 1 */}
-              <div className="bg-slate-50 border border-slate-200/60 p-2.5 rounded-xl flex flex-col gap-1 shadow-sm">
-                <span className="text-[9px] font-bold text-slate-800 font-mono">Order #ZT-9182</span>
-                <span className="text-[8px] text-primary font-bold uppercase tracking-wider">EN ROUTE (Aba Road)</span>
+              <div className="bg-slate-50 border border-slate-200/60 p-2 sm:p-2.5 rounded-xl flex flex-col gap-0.5 sm:gap-1 shadow-sm">
+                <span className="text-[8px] sm:text-[9px] font-bold text-slate-800 font-mono">Order #ZT-9182</span>
+                <span className="text-[7px] sm:text-[8px] text-primary font-bold uppercase tracking-wider">EN ROUTE</span>
               </div>
               
               {/* Order Item 2 */}
-              <div className="bg-slate-50 border border-slate-200/60 p-2.5 rounded-xl flex flex-col gap-1 opacity-85 shadow-sm">
-                <span className="text-[9px] font-bold text-slate-800 font-mono">Order #ZT-9181</span>
-                <span className="text-[8px] text-emerald-500 font-bold uppercase tracking-wider">TRANSIT (Ikwuano)</span>
+              <div className="bg-slate-50 border border-slate-200/60 p-2 sm:p-2.5 rounded-xl flex flex-col gap-0.5 sm:gap-1 opacity-85 shadow-sm">
+                <span className="text-[8px] sm:text-[9px] font-bold text-slate-800 font-mono">Order #ZT-9181</span>
+                <span className="text-[7px] sm:text-[8px] text-emerald-500 font-bold uppercase tracking-wider">TRANSIT</span>
               </div>
 
               {/* Order Item 3 */}
-              <div className="bg-slate-50 border border-slate-200/60 p-2.5 rounded-xl flex flex-col gap-1 opacity-60 shadow-sm">
-                <span className="text-[9px] font-bold text-slate-800 font-mono">Order #ZT-9180</span>
-                <span className="text-[8px] text-slate-400 font-bold uppercase tracking-wider">ASSIGNED (Bende)</span>
+              <div className="bg-slate-50 border border-slate-200/60 p-2 sm:p-2.5 rounded-xl flex flex-col gap-0.5 sm:gap-1 opacity-60 shadow-sm">
+                <span className="text-[8px] sm:text-[9px] font-bold text-slate-800 font-mono">Order #ZT-9180</span>
+                <span className="text-[7px] sm:text-[8px] text-slate-400 font-bold uppercase tracking-wider">ASSIGNED</span>
               </div>
             </div>
           </div>
 
           {/* Right Panel: Map view or metrics */}
-          <div className="w-3/5 flex flex-col justify-between relative bg-slate-50 border border-slate-200/80 rounded-2xl p-4 overflow-hidden shadow-inner">
+          <div className="w-full sm:w-3/5 flex flex-col justify-between relative bg-slate-50 border border-slate-200/80 rounded-2xl p-4 overflow-hidden shadow-inner">
             
             {/* Grid background representation */}
             <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(15,23,42,0.01)_1px,transparent_1px),linear-gradient(to_bottom,rgba(15,23,42,0.01)_1px,transparent_1px)] bg-[size:1rem_1rem] pointer-events-none" />
@@ -172,7 +172,7 @@ export default function HeroScene() {
       <motion.div
         animate={{ y: [0, -6, 0] }}
         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-10 left-10 md:left-2 flex items-center gap-2 bg-white/90 backdrop-blur-md border border-slate-200 rounded-full px-4 py-2 shadow-lg z-20 text-xs font-extrabold text-slate-800"
+        className="absolute top-6 left-4 hidden sm:flex items-center gap-2 bg-white/90 backdrop-blur-md border border-slate-200 rounded-full px-4 py-2 shadow-lg z-20 text-xs font-extrabold text-slate-800"
       >
         <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center text-primary font-black">
           ⚡
@@ -183,7 +183,7 @@ export default function HeroScene() {
       <motion.div
         animate={{ y: [0, 6, 0] }}
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-        className="absolute bottom-10 right-10 md:right-2 flex items-center gap-2 bg-white/90 backdrop-blur-md border border-slate-200 rounded-full px-4 py-2 shadow-lg z-20 text-xs font-extrabold text-slate-800"
+        className="absolute bottom-6 right-4 hidden sm:flex items-center gap-2 bg-white/90 backdrop-blur-md border border-slate-200 rounded-full px-4 py-2 shadow-lg z-20 text-xs font-extrabold text-slate-800"
       >
         <div className="w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 font-bold">
           ✓

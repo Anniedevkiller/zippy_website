@@ -170,7 +170,7 @@ export default function Navbar() {
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
               className={cn(
-                "lg:hidden absolute top-full left-0 right-0 shadow-2xl border-t overflow-hidden",
+                "lg:hidden absolute top-full left-0 right-0 shadow-2xl border-t max-h-[80vh] overflow-y-auto",
                 isLightPage 
                   ? "bg-white border-slate-200" 
                   : "glass-nav border-white/5"
