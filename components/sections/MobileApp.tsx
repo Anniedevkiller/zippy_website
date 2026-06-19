@@ -24,12 +24,12 @@ export default function MobileApp() {
     {
       id: "customer",
       badge: "Customer Portal",
-      title: "Zippy Trail App",
-      description: "Order delicious food from local partners or ship items across the country. Fast, reliable, and trackable down to the second.",
+      title: "ZippyTrail App",
+      description: "Send packages, dispatch documents, or book passenger transportation in Umuahia and Abia State. Reliable, swift, and secure.",
       features: [
-        { title: "One-Tap Reorder", description: "Save your favorite meals and reorder in under 5 seconds." },
-        { title: "Split-Bill Logistics", description: "Order from multiple stores and pay together in one check." },
-        { title: "Contactless Lockers", description: "Deliver safely to community smart lockers with OTP keys." }
+        { title: "Quick Booking", description: "Enter pickup and drop-off details to dispatch a rider instantly." },
+        { title: "Document Security", description: "Secure codes to ensure safe document and parcel handoff." },
+        { title: "Passenger Safety", description: "Verified professional riders and comfortable, safe transit." }
       ],
       screenContent: (
         <div className="w-full h-full bg-[#0d0d10] p-4 flex flex-col justify-between text-left select-none text-xs">
@@ -41,31 +41,31 @@ export default function MobileApp() {
             <div className="w-7 h-7 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary font-bold">A</div>
           </div>
           <div className="w-full bg-white/5 border border-white/10 rounded-lg py-2 px-3 text-[10px] text-charcoal-muted mb-4 flex items-center gap-2">
-            <span>What are you craving?</span>
+            <span>Where are we delivering today?</span>
           </div>
           <div className="grid grid-cols-2 gap-2 mb-4">
             <div className="bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/10 rounded-xl p-3 flex flex-col justify-between h-20">
-              <span className="font-bold text-white text-[11px] font-sans">Food Delivery</span>
-              <span className="text-[9px] text-primary/80">Order Now &rarr;</span>
+              <span className="font-bold text-white text-[11px] font-sans">Book Courier</span>
+              <span className="text-[9px] text-primary/80">Send Package &rarr;</span>
             </div>
             <div className="bg-white/5 border border-white/5 rounded-xl p-3 flex flex-col justify-between h-20">
-              <span className="font-bold text-white text-[11px] font-sans">Send Package</span>
-              <span className="text-[9px] text-charcoal-muted">Book Dispatch &rarr;</span>
+              <span className="font-bold text-white text-[11px] font-sans">Passenger Ride</span>
+              <span className="text-[9px] text-charcoal-muted">Book Trip &rarr;</span>
             </div>
           </div>
           <div className="bg-[#16161c] border border-white/10 rounded-xl p-3 flex-grow flex flex-col justify-between">
             <div className="flex justify-between items-start">
               <div>
-                <span className="text-[9px] text-primary font-extrabold uppercase tracking-wide">Active Track</span>
-                <h5 className="font-bold text-white text-[11px] mt-0.5 font-sans">Burger Lounge</h5>
+                <span className="text-[9px] text-primary font-extrabold uppercase tracking-wide">Active Dispatch</span>
+                <h5 className="font-bold text-white text-[11px] mt-0.5 font-sans">Document Dispatch</h5>
               </div>
-              <span className="text-[10px] font-bold text-white/80 font-mono bg-white/5 px-1.5 py-0.5 rounded">4m left</span>
+              <span className="text-[10px] font-bold text-white/80 font-mono bg-white/5 px-1.5 py-0.5 rounded">2m left</span>
             </div>
             <div className="mt-2">
               <div className="w-full bg-white/5 h-1.5 rounded-full overflow-hidden">
                 <div className="w-[75%] h-full bg-primary rounded-full" />
               </div>
-              <span className="text-[8px] text-charcoal-muted mt-1 block">Rider Marcus is approaching...</span>
+              <span className="text-[8px] text-charcoal-muted mt-1 block">Rider Emmanuel is approaching...</span>
             </div>
           </div>
         </div>
@@ -74,12 +74,12 @@ export default function MobileApp() {
     {
       id: "rider",
       badge: "Rider Hub",
-      title: "Zippy Rider App",
-      description: "Manage shifts on the fly. Log in to claim high-multiplier orders, track tips, and cash out earnings daily.",
+      title: "ZippyTrail Rider App",
+      description: "Join our professional dispatch team. Plan your schedule, view transparent local earnings, and navigate routes.",
       features: [
-        { title: "Heat Maps", description: "Navigate directly to high-demand areas to lock down high order values." },
-        { title: "Dynamic Multipliers", description: "Receive active bonus earnings during peak dining hours and rain storms." },
-        { title: "Auto-Navigation", description: "Built-in offline maps route through alleys and bypass traffic roadblocks." }
+        { title: "Earnings Tracker", description: "View completed runs, base dispatch fees, and client tips." },
+        { title: "Optimized Maps", description: "Follow simple, clear street maps to navigate quickly through local areas." },
+        { title: "Instant Notification", description: "Get notified of nearby package pickups or passenger trip requests." }
       ],
       screenContent: (
         <div className="w-full h-full bg-[#0d0d10] p-4 flex flex-col justify-between text-left select-none text-xs">
@@ -88,25 +88,25 @@ export default function MobileApp() {
               ONLINE
             </span>
             <div className="text-right">
-              <span className="text-[9px] text-charcoal-muted block">Today's Earnings</span>
-              <span className="text-sm font-black text-white font-mono">$184.20</span>
+              <span className="text-[9px] text-charcoal-muted block">Today's Runs</span>
+              <span className="text-sm font-black text-white font-mono">₦12,500</span>
             </div>
           </div>
           <div className="bg-gradient-to-br from-primary/30 to-[#121215] border border-primary/40 rounded-2xl p-4 flex-grow flex flex-col justify-between text-center relative overflow-hidden">
             <div className="absolute top-[-20%] right-[-20%] w-24 h-24 bg-primary/10 rounded-full blur-xl" />
             <div>
-              <span className="text-[9px] font-bold text-primary uppercase tracking-widest">New Trip Dispatch</span>
-              <h4 className="text-base font-black text-white font-mono mt-1">+$18.50</h4>
-              <span className="text-[9px] text-charcoal-muted block mt-0.5">Estimated Duration: 12 mins</span>
+              <span className="text-[9px] font-bold text-primary uppercase tracking-widest">New Delivery Dispatch</span>
+              <h4 className="text-base font-black text-white font-mono mt-1">+₦2,500</h4>
+              <span className="text-[9px] text-charcoal-muted block mt-0.5">Est. Duration: 15 mins</span>
             </div>
             <div className="bg-black/30 rounded-lg p-2.5 my-3 text-left border border-white/5">
               <div className="flex gap-2 items-center text-[10px] text-white/90">
                 <div className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                <span className="truncate">Collect: Pizzeria Roma (0.2m)</span>
+                <span className="truncate">Pickup: 41 School Road</span>
               </div>
               <div className="flex gap-2 items-center text-[10px] text-white/90 mt-1.5">
                 <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                <span className="truncate">Dropoff: 808 Sutter St (1.2m)</span>
+                <span className="truncate">Dropoff: Ochison Plaza, Aba Rd</span>
               </div>
             </div>
             <button
@@ -122,50 +122,50 @@ export default function MobileApp() {
     {
       id: "vendor",
       badge: "Merchant Dashboard",
-      title: "Zippy Partner App",
-      description: "Receive orders, update menus, dispatch kitchen tickets, and monitor net revenue with real-time merchant analytics.",
+      title: "Zippy Partner Dashboard",
+      description: "Designed for business retainerships. Request bulk pickups, track e-commerce customer dispatches, and manage monthly logistics accounts.",
       features: [
-        { title: "Bulk Preparation Mode", description: "Group orders by similar prep instructions to cook faster." },
-        { title: "Rider Dispatch Forecast", description: "Know the exact minute a rider will arrive to align packing time." },
-        { title: "Direct Payout Portal", description: "Review and transfer earnings directly to your bank account weekly." }
+        { title: "Bulk Courier Dispatches", description: "Create multiple delivery requests in seconds and track progress." },
+        { title: "Handoff Verification", description: "Ensure security with recipient signature verification." },
+        { title: "Retainership Accounts", description: "Manage monthly billing cycles and enjoy exclusive discounted rates." }
       ],
       screenContent: (
         <div className="w-full h-full bg-[#0d0d10] p-4 flex flex-col justify-between text-left select-none text-xs">
           <div className="flex justify-between items-center mb-3">
             <div>
-              <h5 className="font-extrabold text-white text-xs font-sans">Bistro Italia</h5>
-              <span className="text-[8px] text-emerald-500 font-bold">&bull; Accepting Orders</span>
+              <h5 className="font-extrabold text-white text-xs font-sans">Umuahia Fashion Hub</h5>
+              <span className="text-[8px] text-emerald-500 font-bold">&bull; Discounted Rates Active</span>
             </div>
-            <span className="text-[10px] font-bold text-white/80 font-mono">$1,420 today</span>
+            <span className="text-[10px] font-bold text-white/80 font-mono">₦38,400 today</span>
           </div>
           <div className="flex-grow flex flex-col gap-2 mb-3">
             <div className="bg-[#16161c] border border-white/5 rounded-xl p-2.5 flex justify-between items-center">
               <div>
-                <span className="text-[9px] font-bold text-white block">#ZT-4091 &bull; Pizza Pepperoni</span>
+                <span className="text-[9px] font-bold text-white block">#ZT-4091 &bull; Dress Delivery</span>
                 <span className="text-[8px] text-charcoal-muted">Ready in 2m</span>
               </div>
-              <span className="text-[9px] font-semibold text-primary bg-primary/10 border border-primary/25 px-2 py-0.5 rounded">PREPPING</span>
+              <span className="text-[9px] font-semibold text-primary bg-primary/10 border border-primary/25 px-2 py-0.5 rounded">DISPATCHING</span>
             </div>
             
             <div className="bg-[#16161c] border border-white/5 rounded-xl p-2.5 flex justify-between items-center">
               <div>
-                <span className="text-[9px] font-bold text-white block">#ZT-4090 &bull; 2x Pasta Carbonara</span>
-                <span className="text-[8px] text-charcoal-muted">Rider Assigned: Marcus</span>
+                <span className="text-[9px] font-bold text-white block">#ZT-4090 &bull; Document Package</span>
+                <span className="text-[8px] text-charcoal-muted">Rider: Emmanuel K.</span>
               </div>
-              <span className="text-[9px] font-semibold text-emerald-500 bg-emerald-500/10 border border-emerald-500/25 px-2 py-0.5 rounded">DISPATCH</span>
+              <span className="text-[9px] font-semibold text-emerald-500 bg-emerald-500/10 border border-emerald-500/25 px-2 py-0.5 rounded">EN ROUTE</span>
             </div>
 
             <div className="bg-[#16161c] border border-white/5 rounded-xl p-2.5 flex justify-between items-center opacity-60">
               <div>
-                <span className="text-[9px] font-bold text-white block">#ZT-4089 &bull; Lasagna Classica</span>
+                <span className="text-[9px] font-bold text-white block">#ZT-4089 &bull; Fabric Roll Delivery</span>
                 <span className="text-[8px] text-charcoal-muted">Delivered at 17:42</span>
               </div>
               <span className="text-[9px] font-semibold text-white/50 bg-white/5 px-2 py-0.5 rounded">COMPLETE</span>
             </div>
           </div>
           <div className="bg-white/5 border border-white/5 rounded-xl p-2.5 flex justify-between items-center text-[10px]">
-            <span className="text-white font-medium">Weekly Net Profits</span>
-            <span className="font-extrabold text-primary font-mono">+$8,409.20</span>
+            <span className="text-white font-medium">Monthly Savings</span>
+            <span className="font-extrabold text-primary font-mono">₦24,500 Saved</span>
           </div>
         </div>
       )
@@ -189,7 +189,7 @@ export default function MobileApp() {
             Supercharged Mobile Interfaces
           </h2>
           <p className="text-slate-500 text-sm md:text-base leading-relaxed">
-            Download our designated applications designed to support logistics networks for riders, restaurants, and everyday users.
+            Download our designated applications designed to support logistics networks for riders, businesses, and everyday users.
           </p>
         </div>
 

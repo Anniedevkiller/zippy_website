@@ -105,7 +105,7 @@ export default function LiveTracking() {
                       Distance
                     </span>
                     <span className="text-base font-black text-slate-800 font-mono">
-                      1.4 miles
+                      2.3 km
                     </span>
                   </div>
                 </div>
@@ -123,21 +123,21 @@ export default function LiveTracking() {
                 <div className="absolute left-[7px] top-2 bottom-2 w-0.5 bg-slate-200" />
                 <div className="absolute left-[7px] top-2 h-[55%] w-0.5 bg-primary shadow-[0_0_4px_rgba(204,85,0,0.3)]" />
 
-                {/* Step 1: Placed */}
+                {/* Step 1: Confirmed */}
                 <div className="flex items-center gap-3 relative">
                   <div className="w-4 h-4 rounded-full bg-primary border-4 border-slate-50 z-10" />
                   <div>
-                    <span className="text-xs font-bold text-slate-800 block">Order Confirmed</span>
-                    <span className="text-[10px] text-slate-500 font-medium">17:54 - Kitchen claimed ticket</span>
+                    <span className="text-xs font-bold text-slate-800 block">Dispatch Confirmed</span>
+                    <span className="text-[10px] text-slate-500 font-medium">17:54 - Rider assigned to request</span>
                   </div>
                 </div>
 
-                {/* Step 2: Cooked */}
+                {/* Step 2: Picked Up */}
                 <div className="flex items-center gap-3 relative">
                   <div className="w-4 h-4 rounded-full bg-primary border-4 border-slate-50 z-10" />
                   <div>
-                    <span className="text-xs font-bold text-slate-800 block">Prepared & Dispatched</span>
-                    <span className="text-[10px] text-slate-500 font-medium">17:59 - Handoff complete</span>
+                    <span className="text-xs font-bold text-slate-800 block">Package Picked Up</span>
+                    <span className="text-[10px] text-slate-500 font-medium">17:59 - Handoff complete & secured</span>
                   </div>
                 </div>
 
@@ -146,8 +146,8 @@ export default function LiveTracking() {
                   <div className="w-4 h-4 rounded-full bg-primary border-4 border-slate-50 z-10 animate-ping absolute -left-0.5" />
                   <div className="w-4 h-4 rounded-full bg-primary border-4 border-slate-50 z-10" />
                   <div>
-                    <span className="text-xs font-bold text-primary block">Out for Delivery</span>
-                    <span className="text-[10px] text-slate-500 font-medium">En route to your location</span>
+                    <span className="text-xs font-bold text-primary block">En Route</span>
+                    <span className="text-[10px] text-slate-500 font-medium">Rider heading to destination</span>
                   </div>
                 </div>
 
@@ -156,7 +156,7 @@ export default function LiveTracking() {
                   <div className="w-4 h-4 rounded-full bg-slate-200 border-4 border-slate-50 z-10" />
                   <div>
                     <span className="text-xs font-bold text-slate-400 block">Arrived & Completed</span>
-                    <span className="text-[10px] text-slate-400 font-medium">Awaiting signature check</span>
+                    <span className="text-[10px] text-slate-400 font-medium">Awaiting delivery verification</span>
                   </div>
                 </div>
               </div>
@@ -166,27 +166,27 @@ export default function LiveTracking() {
             <div className="bg-slate-50 border border-slate-200/80 p-4 rounded-2xl flex items-center justify-between shadow-sm">
               <div className="flex items-center gap-3">
                 <div className="w-11 h-11 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center font-bold text-primary text-sm">
-                  MV
+                  EK
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-slate-900">Marcus Vance</h4>
+                  <h4 className="text-sm font-bold text-slate-900">Emmanuel K.</h4>
                   <div className="flex items-center gap-1 mt-0.5">
                     <Star className="w-3.5 h-3.5 text-primary fill-primary" />
                     <span className="text-[11px] font-bold text-slate-800">4.9</span>
-                    <span className="text-[10px] text-slate-500"> &bull; Electric Scooter</span>
+                    <span className="text-[10px] text-slate-500"> &bull; Dispatch Motorcycle</span>
                   </div>
                 </div>
               </div>
               
               <div className="flex gap-2">
                 <button
-                  onClick={() => alert("Simulating phone call to rider Marcus...")}
+                  onClick={() => alert("Simulating phone call to rider Emmanuel...")}
                   className="p-2.5 rounded-full bg-white border border-slate-200 hover:bg-slate-100 text-slate-600 hover:text-primary transition-all shadow-sm"
                 >
                   <Phone className="w-4 h-4" />
                 </button>
                 <button
-                  onClick={() => alert("Opening chat with rider Marcus...")}
+                  onClick={() => alert("Opening chat with rider Emmanuel...")}
                   className="p-2.5 rounded-full bg-white border border-slate-200 hover:bg-slate-100 text-slate-600 hover:text-primary transition-all shadow-sm"
                 >
                   <MessageSquare className="w-4 h-4" />
@@ -214,15 +214,15 @@ export default function LiveTracking() {
               <div className="absolute bottom-4 left-4 p-3 bg-white border border-slate-200 rounded-lg flex flex-col gap-1 z-10 text-[10px] text-slate-500 shadow-md">
                 <div className="flex items-center gap-2">
                   <div className="w-2.5 h-2.5 rounded-full bg-emerald-500" />
-                  <span>Restaurant Hub (Start)</span>
+                  <span>Pickup Location (Start)</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2.5 h-2.5 rounded-full bg-primary" />
-                  <span>Interactive Drone Delivery</span>
+                  <span>Active Courier Transit</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2.5 h-2.5 rounded-full bg-slate-400" />
-                  <span>Client Residence (End)</span>
+                  <span>Delivery Destination (End)</span>
                 </div>
               </div>
             </div>

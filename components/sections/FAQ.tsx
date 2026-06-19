@@ -11,29 +11,34 @@ interface FAQItem {
 
 const faqList: FAQItem[] = [
   {
-    id: "speed",
-    title: "How fast are Zippy Trail deliveries?",
-    content: "Our average city delivery speed is under 18 minutes. We achieve this by employing smart matching algorithms that pair your ticket with the closest active rider, while predicting kitchen preparation timelines to eliminate waiting bottlenecks.",
+    id: "sameday",
+    title: "Do you offer same-day delivery?",
+    content: "Yes! We offer swift same-day delivery within Umuahia and selected surrounding areas across Abia State.",
   },
   {
-    id: "rider",
-    title: "How do I become a Zippy Rider?",
-    content: "You can sign up on our Rider Portal or download the Zippy Rider App. Once you upload your ID, proof of vehicle registration (motorcycle, bicycle, or electric car), and pass a standard background check, you can go online and start earning.",
+    id: "quote",
+    title: "How do I get a delivery quote?",
+    content: "Simply send us your pickup location, destination, and package details via Call, WhatsApp, or DM for a quick and accurate quote.",
   },
   {
-    id: "vendor",
-    title: "What are the platform commission fees for vendors?",
-    content: "Zippy Trail operates on a competitive flat-rate fee model. Standard food merchants pay a 12% commission on delivery sales, with zero setup fees, free onboarding materials, and full access to our analytics dashboard.",
+    id: "retainer",
+    title: "Do you have business retainership packages?",
+    content: "Yes! We offer customized monthly retainership packages designed for businesses with regular delivery needs, complete with priority dispatch and discounted rates.",
   },
   {
-    id: "insurance",
-    title: "Are packages insured during transit?",
-    content: "Yes, all package deliveries are fully insured up to $1,000 against theft, damage, or loss. For high-value enterprise cargo and bulk freight, we offer custom supplemental insurance packages based on cargo valuation declarations.",
+    id: "deliverable",
+    title: "What can you deliver?",
+    content: "We deliver a wide variety of items including documents, parcels, office supplies, vendor orders, gifts, electronics, e-commerce orders, and more.",
   },
   {
-    id: "cities",
-    title: "Which cities are currently served?",
-    content: "We are currently active in 180+ metropolitan hubs across North America, Europe, Asia, and the Middle East (including New York, London, Tokyo, and Dubai). We expand to 50+ new municipalities every quarter.",
+    id: "booking",
+    title: "How do I book a delivery?",
+    content: "You can book a delivery easily by calling us, sending a WhatsApp message, or sending a DM with your delivery details, and our team will handle the rest.",
+  },
+  {
+    id: "location",
+    title: "Where are you located?",
+    content: "We operate from two convenient branches in Umuahia: (1) 41 School Road, Umuahia and (2) Ochison Plaza, Aba Road by Umuobia Junction, Umuahia, Abia State.",
   },
 ];
 
@@ -53,7 +58,7 @@ export default function FAQ() {
             Frequently Asked Questions
           </h2>
           <p className="text-slate-500 text-sm md:text-base leading-relaxed">
-            Have questions about shipping guidelines, courier pay cycles, or merchant dashboards? We have answers.
+            Everything you need to know about ZippyTrail Transport & Courier Services.
           </p>
         </div>
 

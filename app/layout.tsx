@@ -10,30 +10,32 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Zippy Trail | Deliver Faster. Move Smarter.",
-  description: "Zippy Trail is a premium delivery and logistics platform providing food delivery, package logistics, and express parcel shipping across 180+ cities.",
+  title: "ZippyTrail | Courier, Transport & Logistics Services",
+  description: "ZippyTrail Transport & Logistics Company Limited provides swift, safe, and reliable movement of people, parcels, documents, and business deliveries across Abia State and beyond.",
   keywords: [
     "delivery",
     "logistics",
     "express courier",
-    "food delivery",
+    "courier services",
+    "passenger transport",
     "package shipping",
-    "route optimization",
-    "Zippy Trail",
+    "Umuahia",
+    "Abia State",
+    "ZippyTrail",
     "last mile delivery",
   ],
-  authors: [{ name: "Zippy Trail Technologies" }],
+  authors: [{ name: "ZippyTrail Transport & Logistics Co. Ltd." }],
   openGraph: {
-    title: "Zippy Trail | On-Demand Delivery & Logistics",
-    description: "Experience lightning-fast package routing and food delivery powered by advanced logistics algorithms.",
+    title: "ZippyTrail | Transport & Logistics Co. Ltd.",
+    description: "Swift, safe, and reliable movement of people, parcels, documents, and business deliveries across Abia State and beyond. Zippy. Swift. Reliable. Safe.",
     type: "website",
     locale: "en_US",
-    siteName: "Zippy Trail",
+    siteName: "ZippyTrail",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Zippy Trail | Deliver Faster. Move Smarter.",
-    description: "Food delivery and package logistics made simple.",
+    title: "ZippyTrail | Courier, Transport & Logistics Services",
+    description: "Your trusted partner for courier, transport, and logistics services. Fast pickups, safe deliveries, reliable transportation.",
   },
 };
 

@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { useInView } from "framer-motion";
-import { Package, Bike, Store, Globe } from "lucide-react";
+import { Package, MapPin, Shield, Clock } from "lucide-react";
 
 interface StatItem {
   icon: React.ComponentType<{ className?: string }>;
@@ -12,10 +12,10 @@ interface StatItem {
 }
 
 const statsData: StatItem[] = [
-  { icon: Package, targetValue: 5.4, suffix: "M+", label: "Orders Delivered" },
-  { icon: Bike, targetValue: 12.5, suffix: "K+", label: "Active Riders" },
-  { icon: Store, targetValue: 4.2, suffix: "K+", label: "Partner Vendors" },
-  { icon: Globe, targetValue: 180, suffix: "+", label: "Cities Served" },
+  { icon: Package, targetValue: 100, suffix: "%", label: "Safe Package Handling" },
+  { icon: MapPin, targetValue: 7, suffix: "+", label: "Local Areas Covered" },
+  { icon: Shield, targetValue: 100, suffix: "%", label: "Customer Satisfaction" },
+  { icon: Clock, targetValue: 24, suffix: "/7", label: "Dispatch Availability" },
 ];
 
 function CountUpItem({ icon: Icon, targetValue, suffix, label }: StatItem) {
@@ -38,7 +38,7 @@ function CountUpItem({ icon: Icon, targetValue, suffix, label }: StatItem) {
         setCount(targetValue);
         clearInterval(timer);
       } else {
-        setCount(Number(start.toFixed(1)));
+        setCount(Math.round(start));
       }
     }, stepTime);
 

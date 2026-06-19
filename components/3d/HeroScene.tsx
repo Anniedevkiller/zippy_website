@@ -37,7 +37,7 @@ export default function HeroScene() {
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
             </span>
             <span className="text-xs font-bold text-slate-700 tracking-wide uppercase font-mono">
-              Zippy Trail Terminal OS
+              ZippyTrail Dispatch Console
             </span>
           </div>
           <div className="flex gap-1.5">
@@ -53,26 +53,26 @@ export default function HeroScene() {
           {/* Left Panel: Active Dispatches */}
           <div className="w-2/5 flex flex-col gap-4 overflow-y-auto pr-1">
             <h4 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest border-b border-slate-100 pb-2">
-              Dispatched Tickets
+              Active Dispatches
             </h4>
             
             <div className="flex flex-col gap-2.5">
               {/* Order Item 1 */}
               <div className="bg-slate-50 border border-slate-200/60 p-2.5 rounded-xl flex flex-col gap-1 shadow-sm">
                 <span className="text-[9px] font-bold text-slate-800 font-mono">Order #ZT-9182</span>
-                <span className="text-[8px] text-primary font-bold uppercase tracking-wider">EN ROUTE</span>
+                <span className="text-[8px] text-primary font-bold uppercase tracking-wider">EN ROUTE (Aba Road)</span>
               </div>
               
               {/* Order Item 2 */}
               <div className="bg-slate-50 border border-slate-200/60 p-2.5 rounded-xl flex flex-col gap-1 opacity-85 shadow-sm">
                 <span className="text-[9px] font-bold text-slate-800 font-mono">Order #ZT-9181</span>
-                <span className="text-[8px] text-emerald-500 font-bold uppercase tracking-wider">PREPARING</span>
+                <span className="text-[8px] text-emerald-500 font-bold uppercase tracking-wider">TRANSIT (Ikwuano)</span>
               </div>
 
               {/* Order Item 3 */}
               <div className="bg-slate-50 border border-slate-200/60 p-2.5 rounded-xl flex flex-col gap-1 opacity-60 shadow-sm">
                 <span className="text-[9px] font-bold text-slate-800 font-mono">Order #ZT-9180</span>
-                <span className="text-[8px] text-slate-400 font-bold uppercase tracking-wider">WAITING</span>
+                <span className="text-[8px] text-slate-400 font-bold uppercase tracking-wider">ASSIGNED (Bende)</span>
               </div>
             </div>
           </div>
@@ -131,7 +131,7 @@ export default function HeroScene() {
 
               <div className="absolute bottom-2 left-2 flex gap-1.5 items-center bg-white px-2 py-1 border border-slate-200 rounded-lg text-[8px] font-bold text-slate-600 shadow-sm">
                 <Clock className="w-2.5 h-2.5 text-primary" />
-                <span>Marcus (scooter) - 4 mins remaining</span>
+                <span>Chinedu (Motorcycle) - 4 mins remaining</span>
               </div>
             </div>
 
@@ -140,8 +140,8 @@ export default function HeroScene() {
               <div className="flex gap-2 items-center">
                 <BarChart className="w-3.5 h-3.5 text-primary" />
                 <div>
-                  <span className="text-slate-400 block font-bold">AVG ROUTING</span>
-                  <span className="font-bold text-slate-800">14.2m &bull; Optimized</span>
+                  <span className="text-slate-400 block font-bold">AVG DISPATCH</span>
+                  <span className="font-bold text-slate-800">14.2 mins &bull; Optimized</span>
                 </div>
               </div>
               <div className="w-12 h-6 flex gap-0.5 items-end">
@@ -159,11 +159,11 @@ export default function HeroScene() {
         <div className="bg-slate-50 border-t border-slate-200 px-6 py-3.5 flex justify-between items-center text-[9px] text-slate-500 font-semibold flex-shrink-0">
           <div className="flex items-center gap-1.5">
             <Server className="w-3.5 h-3.5 text-primary" />
-            <span>AI Router active on node US-WEST</span>
+            <span>Routing Node: Umuahia Central Hub</span>
           </div>
           <div className="flex items-center gap-1.5">
             <Activity className="w-3.5 h-3.5 text-emerald-500" />
-            <span>PING 14ms</span>
+            <span>System Status: Online</span>
           </div>
         </div>
       </motion.div>

@@ -14,11 +14,13 @@ interface NavLink {
 
 const navLinks: NavLink[] = [
   { label: "Home", href: "/#home" },
+  { label: "About", href: "/#about" },
   { label: "Services", href: "/#services" },
   { label: "How It Works", href: "/#how-it-works" },
   { label: "Features", href: "/#features" },
   { label: "Live Map", href: "/#live-map" },
   { label: "FAQ", href: "/#faq" },
+  { label: "Visual FAQ", href: "/#guides" },
 ];
 
 export default function Navbar() {
@@ -88,7 +90,7 @@ export default function Navbar() {
             <Logo size={32} className="group-hover:scale-105" />
             <span className={cn(
               "text-xl font-bold tracking-tight transition-colors",
-              isLightPage && !scrolled 
+              isLightPage 
                 ? "text-slate-900 group-hover:text-primary" 
                 : "text-white group-hover:text-primary"
             )}>
@@ -138,7 +140,7 @@ export default function Navbar() {
               Become a Rider
             </a>
             <a
-              href="/#cta"
+              href="/get-started"
               className="group flex items-center gap-1 bg-primary hover:bg-primary-hover text-white text-sm font-bold px-5 py-2.5 rounded-full transition-all shadow-lg shadow-primary/10 hover:shadow-primary/20"
             >
               Get Started
@@ -152,7 +154,7 @@ export default function Navbar() {
             aria-label="Toggle menu"
             className={cn(
               "lg:hidden p-2 focus:outline-none transition-colors",
-              isLightPage && !scrolled ? "text-slate-800 hover:text-slate-900" : "text-white/80 hover:text-white"
+              isLightPage ? "text-slate-800 hover:text-slate-900" : "text-white/80 hover:text-white"
             )}
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -209,7 +211,7 @@ export default function Navbar() {
                     Become a Rider
                   </a>
                   <a
-                    href="/#cta"
+                    href="/get-started"
                     onClick={() => setIsOpen(false)}
                     className="w-full text-center py-3 text-sm font-bold bg-primary hover:bg-primary-hover text-white rounded-full transition-all shadow-md shadow-primary/20"
                   >

@@ -6,10 +6,11 @@ import { Shield, Clock, DollarSign, ArrowRight, CheckCircle, Navigation, Award, 
 import Footer from "@/components/sections/Footer";
 
 export default function BecomeRider() {
-  const [vehicle, setVehicle] = useState("scooter");
-  const [hours, setHours] = useState(20);
-  const [earnings, setEarnings] = useState(360);
+  const [vehicle, setVehicle] = useState("motorbike");
+  const [runs, setRuns] = useState(30);
+  const [earnings, setEarnings] = useState(45000);
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   // Form states
   const [formData, setFormData] = useState({
@@ -17,21 +18,46 @@ export default function BecomeRider() {
     email: "",
     phone: "",
     city: "",
-    vehicleType: "scooter",
+    vehicleType: "motorbike",
   });
 
   // Earnings estimation calculation
   useEffect(() => {
-    let ratePerHour = 18; // Base bicycle rate
-    if (vehicle === "scooter") ratePerHour = 22;
-    if (vehicle === "car") ratePerHour = 26;
+    let ratePerRun = 1200; // Base bicycle rate
+    if (vehicle === "motorbike") ratePerRun = 1500;
+    if (vehicle === "car") ratePerRun = 2200;
 
-    setEarnings(hours * ratePerHour);
-  }, [vehicle, hours]);
+    setEarnings(runs * ratePerRun);
+  }, [vehicle, runs]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    try {
+      const res = await fetch("/api/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          type: "rider-signup",
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          city: formData.city,
+          vehicleType: formData.vehicleType,
+        }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setSubmitted(true);
+      } else {
+        alert(data.message || "Failed to submit application. Please try again.");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("An error occurred. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -44,14 +70,14 @@ export default function BecomeRider() {
       <section className="max-w-7xl mx-auto px-6 md:px-12 py-12 text-center lg:text-left grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
         <div className="lg:col-span-7 flex flex-col gap-6">
           <span className="text-xs font-bold uppercase tracking-widest text-primary self-center lg:self-start bg-primary/10 border border-primary/20 px-3.5 py-1 rounded-full">
-            Drive with Zippy Trail
+            Drive with ZippyTrail
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 leading-tight">
             Earn on Your Schedule.<br />
             <span className="orange-gradient-text">Be Your Own Boss.</span>
           </h1>
           <p className="text-slate-600 text-sm md:text-base leading-relaxed max-w-xl">
-            Deliver food, groceries, and packages in your city. Log on whenever you want, maximize your hourly rates with AI routes, and get paid instantly.
+            Deliver packages and transport passengers in your local area. Log on whenever you want, complete runs across Abia State, and earn daily.
           </p>
 
           {/* Core Perks */}
@@ -62,7 +88,7 @@ export default function BecomeRider() {
               </div>
               <div>
                 <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider">Total Flexibility</h4>
-                <p className="text-[11px] text-slate-500 mt-0.5">No shifts or weekly hour minimums.</p>
+                <p className="text-[11px] text-slate-500 mt-0.5">No shifts or weekly run minimums.</p>
               </div>
             </div>
             
@@ -71,8 +97,8 @@ export default function BecomeRider() {
                 <DollarSign className="w-4 h-4" />
               </div>
               <div>
-                <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider">Instant Payouts</h4>
-                <p className="text-[11px] text-slate-500 mt-0.5">Cash out your earnings immediately.</p>
+                <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider">Reliable Payouts</h4>
+                <p className="text-[11px] text-slate-500 mt-0.5">Access your logistics earnings daily.</p>
               </div>
             </div>
 
@@ -81,8 +107,8 @@ export default function BecomeRider() {
                 <Navigation className="w-4 h-4" />
               </div>
               <div>
-                <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider">Smart Routing</h4>
-                <p className="text-[11px] text-slate-500 mt-0.5">Stacked orders maximize hourly fees.</p>
+                <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider">Local Routes</h4>
+                <p className="text-[11px] text-slate-500 mt-0.5">Stay active in Umuahia and surroundings.</p>
               </div>
             </div>
           </div>
@@ -99,7 +125,7 @@ export default function BecomeRider() {
 
             {/* Vehicle Selector */}
             <div className="flex gap-2 bg-slate-100 border border-slate-200/50 p-1 rounded-xl">
-              {["bicycle", "scooter", "car"].map((v) => (
+              {["bicycle", "motorbike", "car"].map((v) => (
                 <button
                   key={v}
                   onClick={() => setVehicle(v)}
@@ -112,32 +138,32 @@ export default function BecomeRider() {
               ))}
             </div>
 
-            {/* Hours Selector */}
+            {/* Runs Selector */}
             <div className="flex flex-col gap-2">
               <div className="flex justify-between items-center text-xs font-bold text-slate-500">
-                <span>HOURS PER WEEK</span>
-                <span className="text-slate-900 font-mono">{hours} hrs</span>
+                <span>RUNS PER WEEK</span>
+                <span className="text-slate-900 font-mono">{runs} runs</span>
               </div>
               <input
                 type="range"
                 min="5"
-                max="60"
-                value={hours}
-                onChange={(e) => setHours(Number(e.target.value))}
+                max="100"
+                value={runs}
+                onChange={(e) => setRuns(Number(e.target.value))}
                 className="w-full h-1 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-primary focus:outline-none"
               />
             </div>
 
-            {/* Calculator Output Display */}
+            {/* Calculator Display */}
             <div className="bg-primary/5 border border-primary/10 rounded-2xl p-5 text-center flex flex-col items-center gap-1.5">
               <span className="text-xs font-semibold text-primary/95 uppercase tracking-widest">
                 Estimated Weekly Earnings
               </span>
               <span className="text-4xl font-black text-slate-900 font-mono">
-                ${earnings}
+                ₦{earnings.toLocaleString()}
               </span>
               <span className="text-[10px] text-slate-500">
-                Calculated at approx. ${earnings / hours}/hr for a {vehicle}. Tips are 100% yours.
+                Calculated at approx. ₦{(earnings / runs).toLocaleString()} per run for a {vehicle}. Tips are 100% yours.
               </span>
             </div>
           </div>
@@ -168,7 +194,7 @@ export default function BecomeRider() {
                 </div>
                 <h3 className="text-xl font-bold text-slate-900">Application Received!</h3>
                 <p className="text-slate-600 text-sm max-w-sm leading-relaxed">
-                  Thanks for signing up, {formData.name}. Our city ops manager will review your documents and text you onboarding codes within 24 hours.
+                  Thanks for signing up, {formData.name}. Our city operations manager will review your documents and text you onboarding codes within 24 hours.
                 </p>
               </motion.div>
             ) : (
@@ -180,9 +206,10 @@ export default function BecomeRider() {
                       type="text"
                       required
                       placeholder="John Doe"
+                      disabled={loading}
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:border-primary transition-colors placeholder-slate-400"
+                      className="bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:border-primary transition-colors placeholder-slate-400 disabled:opacity-75"
                     />
                   </div>
                   <div className="flex flex-col gap-1.5">
@@ -191,9 +218,10 @@ export default function BecomeRider() {
                       type="email"
                       required
                       placeholder="john@example.com"
+                      disabled={loading}
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:border-primary transition-colors placeholder-slate-400"
+                      className="bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:border-primary transition-colors placeholder-slate-400 disabled:opacity-75"
                     />
                   </div>
                 </div>
@@ -204,10 +232,11 @@ export default function BecomeRider() {
                     <input
                       type="tel"
                       required
-                      placeholder="+1 (555) 000-0000"
+                      placeholder="08061295020"
+                      disabled={loading}
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:border-primary transition-colors placeholder-slate-400"
+                      className="bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:border-primary transition-colors placeholder-slate-400 disabled:opacity-75"
                     />
                   </div>
                   <div className="flex flex-col gap-1.5">
@@ -215,10 +244,11 @@ export default function BecomeRider() {
                     <input
                       type="text"
                       required
-                      placeholder="San Francisco"
+                      placeholder="Umuahia"
+                      disabled={loading}
                       value={formData.city}
                       onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                      className="bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:border-primary transition-colors placeholder-slate-400"
+                      className="bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:border-primary transition-colors placeholder-slate-400 disabled:opacity-75"
                     />
                   </div>
                 </div>
@@ -227,30 +257,37 @@ export default function BecomeRider() {
                   <label className="text-xs font-bold text-slate-500 uppercase">Primary Vehicle Type</label>
                   <select
                     value={formData.vehicleType}
+                    disabled={loading}
                     onChange={(e) => setFormData({ ...formData, vehicleType: e.target.value })}
-                    className="bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-950 focus:outline-none focus:border-primary transition-colors cursor-pointer"
+                    className="bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-955 focus:outline-none focus:border-primary transition-colors cursor-pointer disabled:opacity-75"
                   >
-                    <option value="bicycle">Bicycle (Standard or Electric)</option>
-                    <option value="scooter">Electric Scooter / Motorbike</option>
+                    <option value="bicycle">Bicycle</option>
+                    <option value="motorbike">Motorcycle / Dispatch Bike</option>
                     <option value="car">Car / Delivery Van</option>
-                    <option value="walker">Walking (Metro Centers only)</option>
                   </select>
                 </div>
 
                 {/* Consent checkbox */}
                 <div className="flex gap-2 items-start mt-2">
-                  <input type="checkbox" required id="consent" className="mt-1 cursor-pointer accent-primary" />
+                  <input type="checkbox" required disabled={loading} id="consent" className="mt-1 cursor-pointer accent-primary disabled:opacity-50" />
                   <label htmlFor="consent" className="text-xs text-slate-500 leading-relaxed cursor-pointer select-none">
-                    I agree to the Zippy Trail Rider Terms of Service and authorize background check processing in accordance with global regulations.
+                    I agree to the ZippyTrail Rider Terms of Service and authorize background check verification in accordance with regional regulations.
                   </label>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full mt-4 bg-primary hover:bg-primary-hover text-white text-sm font-bold py-4 rounded-xl transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-2"
+                  disabled={loading}
+                  className="w-full mt-4 bg-primary hover:bg-primary-hover text-white text-sm font-bold py-4 rounded-xl transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-2 disabled:opacity-50"
                 >
-                  Submit Application
-                  <ArrowRight className="w-4 h-4" />
+                  {loading ? (
+                    <div className="w-5 h-5 rounded-full border-2 border-white border-t-transparent animate-spin" />
+                  ) : (
+                    <>
+                      Submit Application
+                      <ArrowRight className="w-4 h-4" />
+                    </>
+                  )}
                 </button>
               </form>
             )}
@@ -271,7 +308,7 @@ export default function BecomeRider() {
             </div>
             <h3 className="text-lg font-bold text-slate-900">Age Requirements</h3>
             <p className="text-slate-500 text-xs leading-relaxed">
-              You must be 18 years or older (or 19+ in certain regions) to register and perform last-mile deliveries on the Zippy Trail network.
+              You must be 18 years or older to register and perform courier dispatch or passenger transport on the ZippyTrail network.
             </p>
           </div>
 
@@ -281,17 +318,17 @@ export default function BecomeRider() {
             </div>
             <h3 className="text-lg font-bold text-slate-900">Smart Device</h3>
             <p className="text-slate-500 text-xs leading-relaxed">
-              A modern iOS or Android smartphone is required to run the Rider application, follow maps navigation, upload proof-of-delivery, and verify routes.
+              A modern iOS or Android smartphone is required to run the Rider application, follow route navigation, and receive pickup dispatches.
             </p>
           </div>
 
           <div className="bg-white border border-slate-200 p-8 rounded-2xl shadow-sm flex flex-col gap-4">
-            <div className="w-10 h-15 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-primary">
+            <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-primary">
               <Shield className="w-5 h-5" />
             </div>
             <h3 className="text-lg font-bold text-slate-900">Background Clearance</h3>
             <p className="text-slate-500 text-xs leading-relaxed">
-              All couriers must hold a valid driver's license (for scooter/car delivery) and successfully pass a local background and criminal registry screening.
+              All dispatch riders and transport operators must hold a valid driver's/rider's license and successfully pass verification checks.
             </p>
           </div>
         </div>

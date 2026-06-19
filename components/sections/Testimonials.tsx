@@ -15,28 +15,28 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    text: "Zippy Trail boosted our restaurant takeout revenues by 42%. The order management interface is incredibly simple, and riders arrive within minutes of food preparation.",
-    name: "Sarah Jenkins",
-    role: "Founder & Executive Chef",
-    company: "Oak & Hearth Bistro",
+    text: "ZippyTrail has completely transformed our boutique delivery operations. Our clients in Ikwuano and Bende receive their packages the same day, handled with care. The pricing is transparent and highly affordable!",
+    name: "Ngozi Okoye",
+    role: "Founder & Creative Director",
+    company: "Umuahia Fashion Hub",
     stars: 5,
-    initials: "SJ",
+    initials: "NO",
   },
   {
-    text: "We integrated Zippy's courier API for our same-day ecommerce dispatch. The live 3D route map gives our customers peace of mind and cut our delivery query tickets by half.",
-    name: "David Chen",
-    role: "Director of Logistics",
-    company: "Lumina Clothing Co.",
+    text: "We require secure and prompt dispatch for confidential legal documents between our Umuahia offices. ZippyTrail's document dispatch service has been exceptionally reliable and professional.",
+    name: "Kalu Benson",
+    role: "Senior Partner",
+    company: "Benson Legal Associates",
     stars: 5,
-    initials: "DC",
+    initials: "KB",
   },
   {
-    text: "I use Zippy Trail daily. The food always arrives steaming hot, and tracking the courier drone on the map is so satisfying. The speed is unmatched by other apps.",
-    name: "Elena Rostova",
-    role: "Lead Software Architect",
-    company: "Voxel Labs",
+    text: "I use ZippyTrail's passenger transport regularly to travel comfortably and safely between Umuahia and Ikwuano. The riders are professional, well-trained, and the service is always dependable.",
+    name: "Amara Nwachukwu",
+    role: "Lecturer",
+    company: "Michael Okpara University",
     stars: 5,
-    initials: "ER",
+    initials: "AN",
   },
 ];
 
@@ -91,10 +91,10 @@ export default function Testimonials() {
             Testimonials
           </span>
           <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900">
-            Trusted by Thousands Globally
+            What Our Clients Say
           </h2>
           <p className="text-slate-500 text-sm md:text-base leading-relaxed">
-            Read stories from food vendors, online shops, riders, and daily users who moved their dispatch operations to Zippy Trail.
+            Read stories from local businesses, vendors, and passengers who rely on ZippyTrail's courier, transport, and logistics services.
           </p>
         </div>
 

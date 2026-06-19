@@ -51,8 +51,8 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 leading-[1.1]"
           >
-            Deliver Faster.<br />
-            <span className="orange-gradient-text font-black">Move Smarter.</span>
+            Move Smarter.<br />
+            <span className="orange-gradient-text font-black">Deliver Faster.</span>
           </motion.h1>
 
           {/* Subheadline */}
@@ -62,7 +62,7 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
             className="text-base md:text-lg text-slate-600 max-w-xl mx-auto lg:mx-0 leading-relaxed"
           >
-            Food delivery and package logistics made simple. Experience lightning-fast deliveries and state-of-the-art tracking built for modern cities.
+            Your trusted partner for courier, transport, and logistics services. Fast pickups, safe deliveries, reliable transportation.
           </motion.p>
 
           {/* CTAs */}
@@ -73,7 +73,7 @@ export default function Hero() {
             className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mt-2"
           >
             <a
-              href="/#cta"
+              href="/get-started"
               className="group w-full sm:w-auto flex items-center justify-center gap-2 bg-primary hover:bg-primary-hover text-white font-bold px-8 py-4 rounded-full transition-all shadow-lg shadow-primary/10 hover:shadow-primary/20"
             >
               Get Started
@@ -96,15 +96,15 @@ export default function Hero() {
           >
             <div className="flex items-center gap-1.5">
               <CheckCircle className="w-4 h-4 text-primary" />
-              <span>99.8% On-Time</span>
+              <span>Fast Pickups</span>
             </div>
             <div className="flex items-center gap-1.5">
               <Shield className="w-4 h-4 text-primary" />
-              <span>Fully Insured</span>
+              <span>Safe & Secure Handling</span>
             </div>
             <div className="flex items-center gap-1.5">
               <Zap className="w-4 h-4 text-primary" />
-              <span>Avg. 18m Delivery</span>
+              <span>Reliable Transport</span>
             </div>
           </motion.div>
         </div>

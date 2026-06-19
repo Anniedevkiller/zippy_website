@@ -16,10 +16,10 @@ export default function RouteScene() {
   }, []);
 
   const stepsInfo = [
-    { title: "Prepping at Vendor", desc: "Chef is packing the meal boxes." },
-    { title: "Rider Picked Up", desc: "Scooter courier secured the cargo." },
-    { title: "Transit Corridor", desc: "AI-optimized speed navigation route." },
-    { title: "Delivered & Signed", desc: "Order dropped off at customer." }
+    { title: "Dispatch Booked", desc: "Rider accepts package booking." },
+    { title: "Package Collected", desc: "Rider secures parcel at pickup." },
+    { title: "Transit Corridor", desc: "Express delivery routing in Umuahia." },
+    { title: "Delivered & Signed", desc: "Safe handoff with customer signature." }
   ];
 
   return (
@@ -104,12 +104,12 @@ export default function RouteScene() {
         {/* Small floating overlays detailing endpoints */}
         <div className="absolute top-8 left-8 p-1.5 bg-white border border-slate-200 rounded-lg flex items-center gap-1.5 text-[8px] font-bold text-slate-600 shadow-sm">
           <Store className="w-3 h-3 text-emerald-500" />
-          <span>Hub: Pizza Roma</span>
+          <span>Pickup: 41 School Road</span>
         </div>
 
         <div className="absolute bottom-8 right-8 p-1.5 bg-white border border-slate-200 rounded-lg flex items-center gap-1.5 text-[8px] font-bold text-slate-600 shadow-sm">
           <Home className="w-3 h-3 text-primary" />
-          <span>Home: 80 Sutter St</span>
+          <span>Drop-off: Aba Road, Umuahia</span>
         </div>
       </div>
 

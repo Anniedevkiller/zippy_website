@@ -3,9 +3,9 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  MapPin, ShieldCheck, Zap, History,
-  Calendar, DollarSign, Navigation, Landmark,
-  ClipboardList, PackageOpen, TrendingUp, BarChart3
+  MapPin, ShieldCheck, Zap, Calendar, DollarSign,
+  Navigation, ClipboardList, PackageOpen, TrendingUp,
+  Users, Briefcase, Clock, Truck, Award
 } from "lucide-react";
 
 interface FeatureCard {
@@ -24,93 +24,93 @@ interface FeatureSection {
 
 const featuresData: FeatureSection[] = [
   {
-    id: "customer",
-    tabLabel: "For Customers",
-    title: "Unrivaled Convenience at Your Fingertips",
-    description: "Get food from local restaurants and package couriers delivered in under 20 minutes, backed by high-tech security.",
+    id: "senders",
+    tabLabel: "For Senders",
+    title: "Swift & Secure Courier Solutions",
+    description: "Send parcels, business documents, and ecommerce merchandise safely across Abia State with real-time updates and professional handling.",
     cards: [
       {
+        icon: PackageOpen,
+        title: "Courier & Parcel Delivery",
+        description: "Swift and safe movement of packages, parcels, and personal items to any destination.",
+      },
+      {
+        icon: Clock,
+        title: "Same-Day Priority",
+        description: "Urgent shipment dispatch completed within the same day for time-sensitive items.",
+      },
+      {
+        icon: ClipboardList,
+        title: "Document Dispatch",
+        description: "Secure movement of confidential corporate papers, legal contracts, and files.",
+      },
+      {
         icon: MapPin,
-        title: "Live 3D Tracking",
-        description: "Watch your rider move in real-time on our interactive vector maps, with precise down-to-the-second ETA logs.",
-      },
-      {
-        icon: ShieldCheck,
-        title: "Secure Payments",
-        description: "Encrypted checkout pathways supporting Credit Card, Apple Pay, Google Pay, and instant digital wallets.",
-      },
-      {
-        icon: Zap,
-        title: "Supercharged Speed",
-        description: "Intelligent dispatch algorithms pair your request with the closest courier to bypass city congestion.",
-      },
-      {
-        icon: History,
-        title: "Smart Order History",
-        description: "Save favorites, reorder with a single tap, track receipts, and set up recurring scheduled deliveries.",
+        title: "Wide Local Coverage",
+        description: "Prompt pickups and deliveries covering Umuahia, Ikwuano, Isiala Ngwa, Bende, and beyond.",
       },
     ],
   },
   {
-    id: "rider",
-    tabLabel: "For Riders",
-    title: "Earn Money on Your Own Terms",
-    description: "Maximize your hourly income with AI-optimized routing, transparent dashboards, and instant cashouts.",
+    id: "passengers",
+    tabLabel: "For Passengers",
+    title: "Safe & Dependable Passenger Transport",
+    description: "Experience comfortable and reliable passenger transit services, connecting people and communities across local government areas.",
     cards: [
       {
-        icon: Calendar,
-        title: "Flexible Schedule",
-        description: "Deliver whenever you want. No minimum hours, no shifts. Work around your studies or full-time career.",
-      },
-      {
-        icon: DollarSign,
-        title: "Earnings Dashboard",
-        description: "Track tips, base fees, and active multipliers. Access gamified weekly bonuses and heat-maps directly.",
+        icon: Users,
+        title: "Comfortable Journeys",
+        description: "Modern, clean, and reliable vehicles for a pleasant passenger transit experience.",
       },
       {
         icon: Navigation,
-        title: "Route Optimization",
-        description: "Our navigation AI chains multiple order collections to minimize dry distance and maximize hourly rate.",
+        title: "Experienced Drivers",
+        description: "Professional, trained, and verified operators who know the best local routes.",
       },
       {
-        icon: Landmark,
-        title: "Instant Cashouts",
-        description: "Don't wait till the end of the week. Access your earnings immediately after shifts with one-tap payouts.",
+        icon: ShieldCheck,
+        title: "Safety First",
+        description: "Strict compliance with safety protocols for complete confidence and peace of mind.",
+      },
+      {
+        icon: Calendar,
+        title: "Convenient Pickups",
+        description: "Flexible scheduled pickups and drop-offs designed around your travel schedule.",
       },
     ],
   },
   {
-    id: "vendor",
-    tabLabel: "For Vendors",
-    title: "Scale Your Business Digitally",
-    description: "Unlock new revenue streams. Manage items, dispatch orders, and study customer behaviors with advanced analytic dashboards.",
+    id: "businesses",
+    tabLabel: "For Businesses",
+    title: "Business Retainership Delivery Solutions",
+    description: "Our monthly retainership packages are designed for businesses with regular delivery needs. Enjoy priority dispatch, discounted rates, and dedicated support.",
     cards: [
       {
-        icon: ClipboardList,
-        title: "Order Dispatch Manager",
-        description: "Accept tickets, update cooking statuses, request couriers, and track rider handoffs in one clean portal.",
+        icon: Award,
+        title: "Priority Dispatch",
+        description: "Your business deliveries move straight to the front of the line for immediate pickup.",
       },
       {
-        icon: PackageOpen,
-        title: "Inventory Control",
-        description: "Add new products, adjust pricing instantly, mark sold-out items, and design customized promotional banners.",
+        icon: DollarSign,
+        title: "Discounted Rates",
+        description: "Enjoy lower logistics costs and predictable pricing with our exclusive business packages.",
       },
       {
-        icon: TrendingUp,
-        title: "Revenue Tracking",
-        description: "Review comprehensive reports detailing sales margins, commission breakdowns, and net weekly payouts.",
+        icon: Briefcase,
+        title: "Dedicated Support",
+        description: "A professional, dedicated support team available to assist your business operations.",
       },
       {
-        icon: BarChart3,
-        title: "Business Analytics",
-        description: "Understand customer satisfaction scores, popular order hours, and get recommendations to increase sales.",
+        icon: Truck,
+        title: "Flexible Options",
+        description: "Solutions tailored to fit your schedule, vendor runs, and regular customer deliveries.",
       },
     ],
   },
 ];
 
 export default function Features() {
-  const [activeTab, setActiveTab] = useState("customer");
+  const [activeTab, setActiveTab] = useState("senders");
 
   const activeSection = featuresData.find((section) => section.id === activeTab)!;
 
@@ -123,13 +123,13 @@ export default function Features() {
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16 flex flex-col items-center gap-4">
           <span className="text-xs font-bold uppercase tracking-widest text-primary">
-            Platform Features
+            Why Choose Us
           </span>
           <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900">
-            Tailored Experiences for Everyone
+            Tailored Services for Everyone
           </h2>
           <p className="text-slate-500 text-sm md:text-base leading-relaxed">
-            Discover specialized portals engineered to deliver value to riders, vendors, and end-consumers alike.
+            Discover how ZippyTrail serves individuals, passengers, and business retainers with dedicated solutions.
           </p>
         </div>
 
@@ -179,7 +179,7 @@ export default function Features() {
               <div className="hidden lg:flex w-full h-[150px] rounded-2xl bg-gradient-to-br from-primary/5 to-transparent border border-slate-200/80 p-6 items-center justify-center relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-24 h-24 bg-primary/10 rounded-full blur-2xl" />
                 <span className="text-xs font-bold uppercase tracking-widest text-primary text-center">
-                  Zippy Trail OS &bull; Automated Nodes Active
+                  ZippyTrail Logistics &bull; Connected Communities
                 </span>
               </div>
             </div>

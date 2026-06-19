@@ -2,7 +2,7 @@
 
 import React, { useRef } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
-import { Smartphone, Store, Bike, CheckCircle } from "lucide-react";
+import { MessageSquare, ClipboardList, Bike, CheckCircle } from "lucide-react";
 
 interface Step {
   id: number;
@@ -15,31 +15,31 @@ interface Step {
 const steps: Step[] = [
   {
     id: 1,
-    icon: Smartphone,
-    title: "Place Order",
-    description: "Submit food orders or cargo shipping logistics inside the customer app. Set custom destination checkpoints.",
+    icon: MessageSquare,
+    title: "Request Dispatch",
+    description: "Send us your pickup location, destination, and package details via Call, WhatsApp, or direct message.",
     duration: "Instant",
   },
   {
     id: 2,
-    icon: Store,
-    title: "Vendor Prepares",
-    description: "The kitchen cooks or the logistic warehouse wraps the cargo. Real-time packing updates send directly to our cloud.",
-    duration: "4 - 8 mins",
+    icon: ClipboardList,
+    title: "Get an Instant Quote",
+    description: "We calculate a quick, transparent, and affordable delivery fee based on your route details.",
+    duration: "1 - 2 mins",
   },
   {
     id: 3,
     icon: Bike,
-    title: "Rider Picks Up",
-    description: "The nearest dispatched driver claims the trip, secures the package, and follows the dynamic AI-optimized route map.",
+    title: "Rider Secures & Departs",
+    description: "A professional, trained ZippyTrail rider collects the items (or picks up passenger) and departs swiftly.",
     duration: "5 - 10 mins",
   },
   {
     id: 4,
     icon: CheckCircle,
-    title: "Delivered",
-    description: "Secure delivery arrives at your door. Contactless proof-of-delivery or digital signature verified instantly.",
-    duration: "Success",
+    title: "Safe Drop-off",
+    description: "Your delivery is safely completed (or passenger arrives) with complete confidence and peace of mind.",
+    duration: "On-Time",
   },
 ];
 
@@ -69,10 +69,10 @@ export default function HowItWorks() {
             Process Flow
           </span>
           <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900">
-            How Zippy Trail Works
+            How ZippyTrail Works
           </h2>
           <p className="text-slate-500 text-sm md:text-base leading-relaxed">
-            Four simple steps powered by autonomous routing AI, delivering anything from standard burgers to critical enterprise parcels.
+            Four simple steps to get your parcels delivered, documents dispatched, or passenger travel completed.
           </p>
         </div>
 

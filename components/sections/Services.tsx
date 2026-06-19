@@ -2,7 +2,11 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Utensils, Package, Zap, Truck, ArrowRight } from "lucide-react";
+import { 
+  Package, Clock, FileText, Briefcase, 
+  MapPin, Users, Calendar, Truck, 
+  ShoppingBag, ArrowRight 
+} from "lucide-react";
 
 interface ServiceItem {
   icon: React.ComponentType<{ className?: string }>;
@@ -13,28 +17,58 @@ interface ServiceItem {
 
 const servicesList: ServiceItem[] = [
   {
-    icon: Utensils,
-    title: "Food Delivery",
-    description: "Hot, fresh meals from your favorite local restaurants delivered to your doorstep. Optimally routed for freshness.",
-    tag: "Under 20m",
-  },
-  {
     icon: Package,
-    title: "Package Delivery",
-    description: "Send documents, keys, gifts, or merchandise safely. Insured transit with secure signature verification.",
-    tag: "On-Demand",
+    title: "Courier & Parcel Delivery",
+    description: "Swift and safe movement of packages, parcels, and personal items to any destination.",
+    tag: "Swift",
   },
   {
-    icon: Zap,
-    title: "Express Delivery",
-    description: "For urgent delivery needs. Instant dispatcher matching ensures your goods arrive in record-breaking speeds.",
+    icon: Clock,
+    title: "Same-Day Delivery Services",
+    description: "Urgent shipment dispatch completed within the same day for time-sensitive packages.",
     tag: "Priority",
   },
   {
+    icon: FileText,
+    title: "Document Dispatch Services",
+    description: "Secure dispatch of confidential corporate papers, files, and legal documents.",
+    tag: "Secure",
+  },
+  {
+    icon: Briefcase,
+    title: "Business & Corporate Logistics Support",
+    description: "Reliable distribution channels and custom support tailored for business supplies.",
+    tag: "Corporate",
+  },
+  {
+    icon: MapPin,
+    title: "Pickup and Drop-off Services",
+    description: "Convenient doorstep collections and drop-offs to save you time and hassle.",
+    tag: "Convenient",
+  },
+  {
+    icon: Users,
+    title: "Passenger Transport Services",
+    description: "Safe, comfortable, and dependable movement of people across Abia State.",
+    tag: "Passenger",
+  },
+  {
+    icon: Calendar,
+    title: "Scheduled Vendor Pickups",
+    description: "Regular, scheduled shipping runs designed to streamline supply chains for local vendors.",
+    tag: "Scheduled",
+  },
+  {
     icon: Truck,
-    title: "Business Logistics",
-    description: "Enterprise routing, freight warehousing, and bulk cargo deliveries. Scale your ecommerce operations effortlessly.",
-    tag: "Enterprise",
+    title: "Last-Mile Delivery Solutions",
+    description: "On-time final branch logistics connecting businesses directly to customers' doors.",
+    tag: "Last-Mile",
+  },
+  {
+    icon: ShoppingBag,
+    title: "E-commerce Delivery Support",
+    description: "Comprehensive logistics and cash-on-delivery services to scale your online store.",
+    tag: "E-Commerce",
   },
 ];
 
@@ -43,7 +77,7 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.15,
+      staggerChildren: 0.1,
     },
   },
 };
@@ -70,13 +104,13 @@ export default function Services() {
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16 flex flex-col items-center gap-4">
           <span className="text-xs font-bold uppercase tracking-widest text-primary">
-            What We Do
+            Our Services
           </span>
           <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900">
-            Designed for Speed. Built for Convenience.
+            Swift, Safe & Reliable Logistics
           </h2>
           <p className="text-slate-500 text-sm md:text-base leading-relaxed">
-            Zippy Trail offers custom delivery models designed to handle food cravings, personal shipping, and global logistics networks.
+            At ZippyTrail, we offer custom transport, courier, and logistics solutions tailored to individuals, businesses, and communities.
           </p>
         </div>
 
@@ -86,7 +120,7 @@ export default function Services() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {servicesList.map((service, index) => {
             const Icon = service.icon;
@@ -94,7 +128,7 @@ export default function Services() {
               <motion.div
                 key={index}
                 variants={cardVariants}
-                className="glass-panel glass-panel-hover glow-card rounded-2xl p-8 flex flex-col justify-between h-[320px] shadow-sm hover:shadow-xl transition-all cursor-pointer group"
+                className="glass-panel glass-panel-hover glow-card rounded-2xl p-8 flex flex-col justify-between h-[300px] shadow-sm hover:shadow-xl transition-all cursor-pointer group"
               >
                 <div>
                   <div className="flex justify-between items-center mb-6">
@@ -106,10 +140,10 @@ export default function Services() {
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors">
+                  <h3 className="text-lg font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors">
                     {service.title}
                   </h3>
-                  <p className="text-slate-500 text-sm leading-relaxed line-clamp-3">
+                  <p className="text-slate-500 text-xs md:text-sm leading-relaxed line-clamp-3">
                     {service.description}
                   </p>
                 </div>

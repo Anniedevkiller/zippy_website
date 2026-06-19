@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Shield, Zap, Box, Compass, Globe, Milestone } from "lucide-react";
+import { ShoppingBag, Briefcase, Store, Sprout, Truck, Sparkles } from "lucide-react";
 
 interface Logo {
   icon: React.ComponentType<{ className?: string }>;
@@ -9,12 +9,12 @@ interface Logo {
 }
 
 const partnerLogos: Logo[] = [
-  { icon: Box, name: "VeloCargo" },
-  { icon: Zap, name: "SwiftFleet" },
-  { icon: Shield, name: "SecureDrop" },
-  { icon: Compass, name: "UrbanTransit" },
-  { icon: Globe, name: "QuantumLog" },
-  { icon: Milestone, name: "RouteHub" },
+  { icon: ShoppingBag, name: "E-Commerce Vendors" },
+  { icon: Briefcase, name: "Corporate Offices" },
+  { icon: Store, name: "Local Merchant Plazas" },
+  { icon: Sprout, name: "Agro-Allied Distributors" },
+  { icon: Truck, name: "Wholesale Distributors" },
+  { icon: Sparkles, name: "Boutique & Fashion Hubs" },
 ];
 
 export default function TrustedBy() {
@@ -24,7 +24,7 @@ export default function TrustedBy() {
     <section className="bg-white py-10 border-y border-slate-200 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12 mb-6">
         <p className="text-center text-xs font-bold uppercase tracking-widest text-slate-400">
-          Powering Logistics For Modern Industry Leaders
+          Powering Logistics for Businesses, Merchants & Individuals Across Abia State
         </p>
       </div>
 
